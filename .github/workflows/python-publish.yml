@@ -34,7 +34,7 @@ jobs:
     - name: Publish to GitHub Packages
       run: |
         pip install twine
-        twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+        twine upload --repository-url https://crostonj.pkg.github.com/ dist/*
       env:
-        TWINE_USERNAME: __token__
+        TWINE_USERNAME: crostonj
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
