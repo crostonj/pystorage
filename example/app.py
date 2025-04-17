@@ -1,4 +1,4 @@
-from azure_blob_utils import AzureBlobStorageHelper
+from azure_blob_utils_croston import AzureBlobStorageHelper
 
 # Your Azure Blob Storage connection string
 connection_string = "DefaultEndpointsProtocol=https;AccountName=...;AccountKey=...;EndpointSuffix=core.windows.net"
