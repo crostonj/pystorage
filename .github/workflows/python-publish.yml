@@ -1,4 +1,4 @@
-name: Publish Python Package to GitHub Packages
+name: Publish Python Package to PyPI
 
 on:
   push:
@@ -9,10 +9,6 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: write
 
     steps:
     - name: Checkout code
@@ -31,10 +27,10 @@ jobs:
     - name: Build package
       run: python -m build
 
-    - name: Publish to GitHub Packages
+    - name: Publish to PyPI
       run: |
         pip install twine
-        twine upload --repository-url https://crostonj.pkg.github.com/ dist/*
+        twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
       env:
-        TWINE_USERNAME: crostonj
-        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }} # Rename this secret in GitHub
