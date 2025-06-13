@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "azure-blob-utils-croston"
-version = "0.2.0"
+version = "0.3.0"
 description = "Utility functions for Azure Blob Storage access"
 authors = [
     { name="Jeff Croston", email="crostonj@gmail.com" }
